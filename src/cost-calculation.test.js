@@ -21,7 +21,4 @@ describe('cost calculation', () => {
         });
 
     });
-    // it('adds floats correctly', () => {
-    //     expect(costCalulator.calculateCost(0.2, 5)).toBe(3);
-    // });
 });
