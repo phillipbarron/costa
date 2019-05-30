@@ -1,4 +1,4 @@
-const costCalulator = require('./index');
+const costCalulator = require('./cost-calcunpmlator');
 
 describe('cost calculation', () => {
     it('adds whole numbers correctly', () => {
