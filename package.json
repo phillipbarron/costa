@@ -1,0 +1,11 @@
+{
+  "name": "costa",
+  "version": "1.0.0",
+  "description": "calculate cumulative costs for resurces",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
