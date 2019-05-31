@@ -1,5 +1,5 @@
 var inquirer = require("inquirer");
-const costCalulator = require('./cost-calculator');
+const costCalulator = require('./calculator');
 
 const numericValidator = (value) => {
     const valueAsFloat = parseFloat(value);
@@ -10,16 +10,16 @@ inquirer
     {
       type: "rateOfIncrease",
       name: "rateOfIncrease",
-      message: "What's the rate of increase per month?",
+      message: "What's the rate of increase?",
       validate: numericValidator
     },
     {
-        type: "months",
-        name: "months",
-        message: "and how many months do you need that for?",
+        type: "duration",
+        name: "duration",
+        message: "and for what duration?",
         validate: numericValidator
       },
   ])
   .then(answers => {
-    console.log(`that will cost you $${costCalulator.calculateCost(answers.rateOfIncrease, answers.months)}`);
+    console.log(`Total value: ${costCalulator.calculateCumulativeValue(answers.rateOfIncrease, answers.duration)}\n`);
   });
